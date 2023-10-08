@@ -1,7 +1,7 @@
 import requests
+import urllib
 
-
-class AccessToken:
+class Authorization:
     """To be able get a permission to access private data"""
     def __init__(self, redirect_uri: str, client_id: str, client_secret: str, token_url: str) -> None:
         """
@@ -14,6 +14,23 @@ class AccessToken:
         self.__client_id = client_id
         self.__client_secret = client_secret
         self.__token_url = token_url
+        self.__auth_url = 'https://accounts.spotify.com/authorize'
+    
+    def get_auth(self, scope) -> str:
+        """Get authorization
+
+        :param scope (str): permissions type
+        :return url (authorization) return to navigator after authentication
+        """
+    
+        params = {
+            'client_id': self.__client_id,
+            'response_type': 'code', # spotify documentation info to set 'code' here 
+            'redirect_uri': self.__redirect_uri, # to redirect if something wrong happen
+            'scope': scope # our permissions from the user
+        }
+
+        return f'{self.__auth_url}?{urllib.parse.urlencode(params)}'
 
     def get_token(self, code: str) -> object:
         """Get access token
