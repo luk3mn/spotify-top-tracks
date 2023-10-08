@@ -3,9 +3,11 @@ import sqlalchemy
 import pandas as pd
 
 class DataLoad:
-    """ Module to load our structured data in a sqlite database
-    """
+    """To load all structured data in a SQL database"""
     def __init__(self, df: pd.DataFrame) -> None:
+        """
+        :param df (object): to work with a pandas DataFrame in particular
+        """
         self.df = df
         self.DATABASE_LOCATION = 'sqlite:///my_played_tracks.sqlite'
 

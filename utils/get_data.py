@@ -1,22 +1,33 @@
 import requests
 
+
 class GetData:
-    """ This module refers to extract data from your source
-        - We used Spotify API to get my private data from top itens in my spotify account
+    """To be able to extract private data from Spotify Account"""
 
-    """
-    def __init__(self, api_url) -> None:
-        self.api_url = api_url
-
-    def get_user_top_items(self, limit: int, headers: object, type: str, offset: int=0, time_range: str = 'medium_term', filename: str = 'MyTopItems.json') -> object:
-        """ Used to request our data on Spotify API
-            - filename: it was set as 'MyTopItems.json' in cause nothing are specified on module callable
-            - time_range: there are three option based on API instructions, they are shor_term (about 4 weeks), medium_term (approximately last 6 months) and long_term (calculated from several years of data and including all new data as it becomes available)
+    def __init__(self, endpoint: str, headers: object, filename: str = 'MyTopItems.json') -> object:
         """
-        response = requests.get(url=f'{self.api_url}me/top/{type}?limit={limit}&offset={offset}&time_range={time_range}', headers=headers)
+        :param endpoint (str): specify the endpoint that it will be used
+        :param headers (object): to set the headers that it will be used
+        :param filename (str): it was set as 'MyTopItems.json' in cause nothing are specified on module callable
+        """
+        self.__endpoint = endpoint
+        self.__headers = headers
+        self.__filename = filename
+
+    def get_users_top_items(self, limit: int = 20, offset: int = 0, type: str = 'tracks', time_range: str = 'medium_term') -> object:
+        """Get user's top items of the type 'tracks' from Spotify API
+
+        :param limit (int): The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50
+        :param offset (int): The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+        :param type (int): The type of entity to return, artists or tracks. Default: 'tracks'
+        :param time_range: there are three option based on API instructions, they are short_term (about 4 weeks), medium_term (approximately last 6 months) and long_term (calculated from several years of data and including all new data as it becomes available)
+        :return response (json): json response 
+        """
+        response = requests.get(
+            url=f'{self.__endpoint}me/top/{type}?limit={limit}&offset={offset}&time_range={time_range}', headers=self.__headers)
 
         ### write a json file ith our collection data
-        with open(filename, 'w') as f:
+        with open(self.__filename, 'w') as f:
             f.write(response.text)
-            
-        return response.json() # return json with the response
+
+        return response.json()

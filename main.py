@@ -27,7 +27,6 @@ app = Flask(__name__)
 app.secret_key = '8fy*ḧ#h*%YHD'
 app.config['SESSION_COOKIE_NAME'] = 'Spotify Access'
 
-get_data = GetData(api_url=ENDPOINT)
 data = DataStruct()
 access_token = AccessToken(client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET, redirect_uri=REDIRECT_URI, token_url=TOKEN_URL)
 
@@ -59,13 +58,14 @@ def redirect_page():
             "Authorization" : "Bearer {token}".format(token=new_token)
         }
 
+        get_data = GetData(endpoint=ENDPOINT, headers=headers)
         playlist = Playlist(headers=headers, user_id=SPOTIFY_USER_ID)
 
     except:
         return redirect('/') # if access token doesn't exist, redirect to get a new authentication
     
     ### Data Extract
-    get_user_top_items = get_data.get_user_top_items(headers=headers, type='tracks', limit=50)
+    get_user_top_items = get_data.get_users_top_items(limit=50, offset=0)
     
     ### Data Transform
     df = data.struct_top_items()
@@ -82,7 +82,7 @@ def redirect_page():
     ### Create Playlist
     pl = playlist.create_playlist(name='Rock on', description='Testing Spotify Playlist', public=False)
     uris = data.get_tracks_uris()
-    # playlist.populate_playlist(playlist_id=pl['id'], uris=uris)
+    playlist.populate_playlist(playlist_id=pl['id'], uris=uris)
 
     return get_user_top_items
 

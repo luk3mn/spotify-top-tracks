@@ -12,7 +12,7 @@ class DataStruct:
 
         :param: filename (str): was set as "MyTopItems.json" if a specific name doesn't specified
         """
-        self.filename = filename
+        self.__filename = filename
 
     def struct_top_items(self) -> object:
 
@@ -23,7 +23,7 @@ class DataStruct:
         release_date = []
         popularity = []
 
-        with open(self.filename) as json_file:
+        with open(self.__filename) as json_file:
             mydata = json.load(json_file)
 
         ### Storing our data into lists
@@ -56,7 +56,7 @@ class DataStruct:
         :return (uris): uris Spotify tracks list
         """
         uris = []
-        with open(self.filename) as json_file:
+        with open(self.__filename) as json_file:
             mydata = json.load(json_file)
 
         for song in mydata['items']:
