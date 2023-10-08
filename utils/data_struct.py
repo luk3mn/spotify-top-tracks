@@ -3,47 +3,64 @@ import json
 
 class DataStruct:
     """ This module refers to data organization after extracting from Spotify API:
-        - These datas are stored in a json file
+        - These data are stored in a json file
         - We can run this json file and get just values important for us
-        - Finally, we will be able to structure these data in pandas dataframe before loading it in some database
+        - Finally, we will be able to structure these data in pandas DataFrame before loading it in some database
     """
-    def __init__(self) -> None:
-        self.__mydata = ''
-        self.__song_dict = {}
-        self.__song_names = []
-        self.__song_id = []
-        self.__artist_names = []
-        self.__album_name = []
-        self.__release_date = []
-        self.__popularity = []
+    def __init__(self, filename: str = 'MyTopItems.json') -> None:
+        """ Structuring data collection 
 
-    """ Structuring data collecton """
-    def struct_top_items(self, filename: str = 'MyTopItems.json') -> object:
-        """ filename was set as "MyTopItems.json" if a espefic name doesn't especified
+        :param: filename (str): was set as "MyTopItems.json" if a specific name doesn't specified
         """
-        with open(filename) as json_file:
-            self.__mydata = json.load(json_file)
+        self.filename = filename
+
+    def struct_top_items(self) -> object:
+
+        song_names = []
+        song_id = []
+        artist_names = []
+        album_name = []
+        release_date = []
+        popularity = []
+
+        with open(self.filename) as json_file:
+            mydata = json.load(json_file)
 
         ### Storing our data into lists
-        for song in self.__mydata['items']:
-            self.__song_names.append(song['name'])
-            self.__song_id.append(song['id'])
-            self.__artist_names.append(song['artists'][0]['name'])
-            self.__album_name.append(song['album']['name'])
-            self.__release_date.append(song['album']['release_date'])
-            self.__popularity.append(song['popularity'])
+        for song in mydata['items']:
+            song_names.append(song['name'])
+            song_id.append(song['id'])
+            artist_names.append(song['artists'][0]['name'])
+            album_name.append(song['album']['name'])
+            release_date.append(song['album']['release_date'])
+            popularity.append(song['popularity'])
 
-        ### Dictionary to structure our data before transforming in pandas dataframe
-        self.__song_dict = {
-            'song_id': self.__song_id,
-            'song': self.__song_names,
-            'artist': self.__artist_names,
-            'album': self.__album_name,
-            'release': self.__release_date,
-            'popularity': self.__popularity
+        ### Dictionary to structure our data before transforming in pandas DataFrame
+        song_dict = {
+            'song_id': song_id,
+            'song': song_names,
+            'artist': artist_names,
+            'album': album_name,
+            'release': release_date,
+            'popularity': popularity
         }
 
-        ### Here we could structured our data in pandas and returned as a objetc
-        df = pd.DataFrame(self.__song_dict, columns=['song_id', 'song', 'artist', 'album', 'release', 'popularity'])
+        ### Here we could structured our data in pandas and returned as a object
+        df = pd.DataFrame(song_dict, columns=['song_id', 'song', 'artist', 'album', 'release', 'popularity'])
         return df
+    
+    def get_tracks_uris(self) -> list:
+        """Get uris from json file
         
+        :filename (str): json file name
+        :return (uris): uris Spotify tracks list
+        """
+        uris = []
+        with open(self.filename) as json_file:
+            mydata = json.load(json_file)
+
+        for song in mydata['items']:
+            uris.append(song['uri'])
+            
+        return uris
+    

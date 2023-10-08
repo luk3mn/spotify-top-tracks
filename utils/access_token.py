@@ -8,7 +8,7 @@ class AccessToken:
         self.__token_url = token_url
     
     def get_token(self, code):
-        hedears = {'Content-Type':'application/x-www-form-urlencoded'}
+        headers = {'Content-Type':'application/x-www-form-urlencoded'}
     
         data = {
             "grant_type":"authorization_code", # TYPE
@@ -19,4 +19,4 @@ class AccessToken:
         }
 
         # return response with access_token
-        return requests.post(url=self.__token_url, data=data, headers=hedears)
+        return requests.post(url=self.__token_url, data=data, headers=headers)
