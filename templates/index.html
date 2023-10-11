@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Top Tracks</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            --bg-primary: rgb(68, 68, 68);
+            --bg-secondary: rgb(25, 201, 25);
+            --font-primary: rgb(247, 243, 243);
+            --font-secondary: rgb(49, 49, 49);
+        }
+
+        .container .playlist {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1rem;
+            border: 3px solid var(--bg-secondary);
+            background-color: var(--bg-primary);
+            border-radius: 0 0 .5rem .5rem;
+        }
+        
+        .container .playlist h1 {
+            color: rgb(247, 243, 243);
+        }
+
+        .container .playlist form input,
+        .container .playlist form button {
+            padding: .5rem;
+            border-radius: .4rem;
+            /* border: 2px solid var(--bg-secondary); */
+            border: none;
+            box-sizing: border-box;
+            text-align: center;
+            font-weight: 700;
+            margin: .5rem;
+            color: var(--bg-primary);
+        }
+        
+        .container .playlist form button {
+            background-color: var(--bg-secondary);
+            text-transform: uppercase;
+        }
+
+        .container .table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem;
+            background-color: var(--font-primary);
+        }
+        
+        .container .table .column {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+        }
+        
+        .container .table .column li {
+            border: 3px solid var(--bg-primary);    
+            background-color: var(--bg-secondary);
+            color: var(--font-secondary);
+            list-style: none;
+            margin: .2rem;
+            padding: .5rem;
+            border-radius: .5rem;
+        }
+
+        .container .table .column #column-name {  
+            background-color: var(--bg-primary);
+            color: var(--font-primary);
+            border-radius: 0 0 .5rem .5rem;
+            /* border: 3px solid var(--bg-secondary); */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="playlist">
+            <h1>
+                Try on create your playlist
+            </h1>
+            <form action="/create_playlist" method="post">
+              <input name="name" placeholder="Playlist name"/>
+              <input name="description" placeholder="Playlist description"/>
+              <button type="submit">Create</button>
+            </form>
+        </div>
+        <div class="table">
+            <ul class="column">
+                <li id="column-name">Name</li>
+                {% for track in tracks %}
+                    <li>{{ track[1] }}</li>
+                {% endfor %}
+            </ul>
+            <ul class="column">
+                <li id="column-name">Artist</li>
+                {% for track in tracks %}
+                    <li>{{ track[2] }}</li>
+                {% endfor %}
+            </ul>
+            <ul class="column">
+                <li id="column-name">Album</li>
+                {% for track in tracks %}
+                    <li>{{ track[3] }}</li>
+                {% endfor %}
+            </ul>
+            <ul class="column">
+                <li id="column-name">Release</li>
+                {% for track in tracks %}
+                    <li>{{ track[4] }}</li>
+                {% endfor %}
+            </ul>
+            <ul class="column">
+                <li id="column-name">Popularity</li>
+                {% for track in tracks %}
+                    <li>{{ track[5] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
