@@ -74,13 +74,49 @@ def redirect_page():
     # uris = data.get_tracks_uris()
     # playlist.populate_playlist(playlist_id=pl['id'], uris=uris)
 
+    ### SHORT TERM TRACKS
+    short_term = GetData(endpoint=ENDPOINT, headers=headers, filename='short_term.json')
+    short_term.get_users_top_items(time_range='short_term')
+    data_st = DataStruct(filename='short_term.json')
+    df_st = data_st.struct_top_items()
+
+    data_load_st = DataLoad(df=df_st, tb_name='short_term_tracks')
+    data_load_st.sql_store()
+
+    ### LONG TERM TRACKS
+    long_term = GetData(endpoint=ENDPOINT, headers=headers, filename='long_term.json')
+    long_term.get_users_top_items(time_range='long_term',limit=30)
+    data_lt = DataStruct(filename='long_term.json')
+    df_lt = data_lt.struct_top_items()
+
+    data_load_lt = DataLoad(df=df_lt, tb_name='long_term_tracks')
+    data_load_lt.sql_store()
+
     # return get_users_top_items
-    return redirect('/application')
+    return redirect('/home')
+    # return redirect('/application')
     # tracks = database()
     # return render_template('index.html', tracks=tracks)
 
+@app.route('/home')
+def home_page():
+    return render_template('home.html')
+
+@app.route('/short-term-tracks')
+def short_term_tracks():
+    return 'Short Term Tracks'
+
+@app.route('/medium-term-tracks')
+def medium_term_tracks():
+    return 'Medium Term Tracks'
+
+@app.route('/long-term-tracks')
+def long_term_tracks():
+    return 'Long Term Tracks'
+
+
 @app.route('/application')
-def application():
+def application(): # try on pass using params to get a specif table
 
     conn = sqlite3.connect('my_played_tracks.sqlite')
     cursor = conn.cursor()
