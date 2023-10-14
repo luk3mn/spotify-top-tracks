@@ -23,10 +23,10 @@ REDIRECT_URI = 'http://127.0.0.1:5000/redirect'
 TOKEN = 'token'
 
 app = Flask(__name__)
-app.secret_key = '8fy*ḧ#h*%YHD'
+app.secret_key = credentials['SECRET_KEY']
 app.config['SESSION_COOKIE_NAME'] = 'Spotify Access'
 
-data = DataStruct()
+data_struct = DataStruct()
 get_authorization = Authorization(client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET, redirect_uri=REDIRECT_URI, token_url=TOKEN_URL)
 @app.route('/')
 def authorization():
@@ -53,91 +53,93 @@ def redirect_page():
 
     except:
         return redirect('/') # if access token doesn't exist, redirect to get a new authentication
-    
-    ### Data Extract
-    get_users_top_items = get_data.get_users_top_items(limit=50, offset=0)
-    
-    ### Data Transform
-    df = data.struct_top_items()
-    data_validation = DataValidation(df)
+
+    ### SHORT TERM TRACKS
+    get_data.get_users_top_items(time_range='short_term', filename='short_term.json')
+    df_st = data_struct.struct_top_items(filename='short_term.json')
+
+    data_validation = DataValidation(df_st)
     data_validation.isempty()
     data_validation.isnull()
     data_validation.isuinique(column_name='song_id')
-    print(df)
-
-    ### Data Load
-    data_load = DataLoad(df=df)
-    data_load.sql_store()
-
-    ### Create Playlist
-    # pl = playlist.create_playlist(name='Rock on', description='Testing Spotify Playlist', public=False)
-    # uris = data.get_tracks_uris()
-    # playlist.populate_playlist(playlist_id=pl['id'], uris=uris)
-
-    ### SHORT TERM TRACKS
-    short_term = GetData(endpoint=ENDPOINT, headers=headers, filename='short_term.json')
-    short_term.get_users_top_items(time_range='short_term')
-    data_st = DataStruct(filename='short_term.json')
-    df_st = data_st.struct_top_items()
 
     data_load_st = DataLoad(df=df_st, tb_name='short_term_tracks')
     data_load_st.sql_store()
 
+    ### MEDIUM TERM TRACKS
+    get_data.get_users_top_items(time_range='medium_term', filename='medium_term.json', limit=50)
+    df_mt = data_struct.struct_top_items(filename='medium_term.json')
+
+    data_validation = DataValidation(df_mt)
+    data_validation.isempty()
+    data_validation.isnull()
+    data_validation.isuinique(column_name='song_id')
+
+    data_load_mt = DataLoad(df=df_mt, tb_name='medium_term_tracks')
+    data_load_mt.sql_store()
+
     ### LONG TERM TRACKS
-    long_term = GetData(endpoint=ENDPOINT, headers=headers, filename='long_term.json')
-    long_term.get_users_top_items(time_range='long_term',limit=30)
-    data_lt = DataStruct(filename='long_term.json')
-    df_lt = data_lt.struct_top_items()
+    get_data.get_users_top_items(time_range='long_term', filename='long_term.json', limit=30)
+    df_lt = data_struct.struct_top_items(filename='long_term.json')
+
+    data_validation = DataValidation(df_lt)
+    data_validation.isempty()
+    data_validation.isnull()
+    data_validation.isuinique(column_name='song_id')
 
     data_load_lt = DataLoad(df=df_lt, tb_name='long_term_tracks')
     data_load_lt.sql_store()
 
-    # return get_users_top_items
-    return redirect('/home')
-    # return redirect('/application')
-    # tracks = database()
-    # return render_template('index.html', tracks=tracks)
+    return redirect('/about')
 
-@app.route('/home')
-def home_page():
-    return render_template('home.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/short-term-tracks')
 def short_term_tracks():
-    return 'Short Term Tracks'
+    tracks = search_db(table='short_term_tracks')
+    global uris
+    uris = data_struct.get_tracks_uris(filename='short_term.json')
+    return render_template('content.html', tracks=tracks)
 
 @app.route('/medium-term-tracks')
 def medium_term_tracks():
-    return 'Medium Term Tracks'
+    tracks = search_db(table='medium_term_tracks')
+    global uris
+    uris = data_struct.get_tracks_uris(filename='medium_term.json')
+    return render_template('content.html', tracks=tracks)
 
 @app.route('/long-term-tracks')
 def long_term_tracks():
-    return 'Long Term Tracks'
+    tracks = search_db(table='long_term_tracks')
+    global uris
+    uris = data_struct.get_tracks_uris(filename='long_term.json')
+    return render_template('content.html', tracks=tracks)
 
-
-@app.route('/application')
-def application(): # try on pass using params to get a specif table
-
+def search_db(table):
     conn = sqlite3.connect('my_played_tracks.sqlite')
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM my_played_tracks')
-    tracks = cursor.fetchall()
+    cursor.execute('SELECT * FROM {}'.format(table))
+    return cursor.fetchall()
 
-    return render_template('index.html', tracks=tracks)
-
+""" FIX IT
+- Forbid to creating playlist by URL
+- Improve application flow to remove error on playlist (maybe improving rotes)
+"""
 @app.route("/create_playlist", methods=['GET', 'POST'])
 def create_playlist():
 
     if request.method == 'POST':
         playlist_name = request.form['name']
         playlist_desc = request.form['description']
-        pl = playlist.create_playlist(name=playlist_name, description=playlist_desc, public=False)
-        uris = data.get_tracks_uris()
+    
+    if playlist_name: 
+        pl = playlist.create_playlist(name=playlist_name, description=playlist_desc)
         playlist.populate_playlist(playlist_id=pl['id'], uris=uris)
-
-    return redirect('/application')
+    else:
+        return 'Please, enter a value for your playlist name'
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-    # https://kanchanardj.medium.com/redirecting-to-another-page-with-button-click-in-python-flask-c112a2a2304c

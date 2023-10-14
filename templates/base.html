@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Top Tracks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <a href=/short-term-tracks>
+                <button class="bg-tracks">Short Term Tracks</button>
+            </a>
+            <a href=/medium-term-tracks>
+                <button class="bg-tracks">Medium Term Tracks</button>
+            </a>
+            <a href=/long-term-tracks>
+                <button class="bg-tracks">Long Term Tracks</button>
+            </a>
+        </div>
+
+        {% block content %}{% endblock %}
+        
+    </div>
+</body>
+</html>

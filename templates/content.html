@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="playlist">
+    <h2>
+        Try on create your playlist
+    </h2>
+    <form action="/create_playlist" method="post">
+      <input name="name" placeholder="Playlist name"/>
+      <input name="description" placeholder="Playlist description"/>
+      <button type="submit">Create</button>
+    </form>
+</div>
+
+<div class="tracks-list">
+    {% for track in tracks %}
+    <div class="table">
+        <ul class="columns">
+            <li>Track</li>
+            <li>Artist</li>
+            <li>Album</li>
+            <li>Release</li>
+            <li>Popularity</li>
+        </ul>
+        <ul class="fields">
+            <li>{{ track[1] }}</li>
+            <li>{{ track[2] }}</li>
+            <li>{{ track[3] }}</li>
+            <li>{{ track[4] }}</li>
+            <li>{{ track[5] }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+{% endblock %}

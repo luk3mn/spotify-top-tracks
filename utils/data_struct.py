@@ -7,15 +7,15 @@ class DataStruct:
         - We can run this json file and get just values important for us
         - Finally, we will be able to structure these data in pandas DataFrame before loading it in some database
     """
-    def __init__(self, filename: str = 'MyTopItems.json') -> None:
-        """ Structuring data collection 
+    def __init__(self) -> None:
+        """ Structuring data collection """
+        pass
 
-        :param: filename (str): was set as "MyTopItems.json" if a specific name doesn't specified
+    def struct_top_items(self, filename: str) -> object:
         """
-        self.__filename = filename
-
-    def struct_top_items(self) -> object:
-
+        :param: filename (str): was set as "MyTopItems.json" if a specific name doesn't specified
+        :return df (DataFrame): return to web app a pandas frame work
+        """
         song_names = []
         song_id = []
         artist_names = []
@@ -23,7 +23,7 @@ class DataStruct:
         release_date = []
         popularity = []
 
-        with open(self.__filename) as json_file:
+        with open(filename) as json_file:
             mydata = json.load(json_file)
 
         ### Storing our data into lists
@@ -49,14 +49,14 @@ class DataStruct:
         df = pd.DataFrame(song_dict, columns=['song_id', 'song', 'artist', 'album', 'release', 'popularity'])
         return df
     
-    def get_tracks_uris(self) -> list:
+    def get_tracks_uris(self, filename: str) -> list:
         """Get uris from json file
         
         :filename (str): json file name
         :return (uris): uris Spotify tracks list
         """
         uris = []
-        with open(self.__filename) as json_file:
+        with open(filename) as json_file:
             mydata = json.load(json_file)
 
         for song in mydata['items']:

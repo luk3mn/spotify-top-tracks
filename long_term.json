@@ -470,7 +470,7 @@
     "id" : "6mFkJmJqdDVQ1REhVfGgd1",
     "is_local" : false,
     "name" : "Wish You Were Here",
-    "popularity" : 77,
+    "popularity" : 78,
     "preview_url" : "https://p.scdn.co/mp3-preview/e3d046771206da9115d0a619ede2210b610dc9f0?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
     "track_number" : 4,
     "type" : "track",
@@ -742,7 +742,7 @@
     "id" : "5MxNLUsfh7uzROypsoO5qe",
     "is_local" : false,
     "name" : "Dream On",
-    "popularity" : 11,
+    "popularity" : 12,
     "preview_url" : null,
     "track_number" : 3,
     "type" : "track",
@@ -1150,7 +1150,7 @@
     "id" : "5JQVkWMnzmBgV1MjmlHpN7",
     "is_local" : false,
     "name" : "Demons - Live London Sessions / 2013",
-    "popularity" : 14,
+    "popularity" : 13,
     "preview_url" : null,
     "track_number" : 4,
     "type" : "track",
@@ -1286,7 +1286,7 @@
     "id" : "0COqiPhxzoWICwFCS4eZcp",
     "is_local" : false,
     "name" : "Bring Me To Life",
-    "popularity" : 85,
+    "popularity" : 86,
     "preview_url" : null,
     "track_number" : 2,
     "type" : "track",
@@ -1558,7 +1558,7 @@
     "id" : "7qmngHzzUvkcj2P00A0kfb",
     "is_local" : false,
     "name" : "Tarde Livre",
-    "popularity" : 47,
+    "popularity" : 48,
     "preview_url" : "https://p.scdn.co/mp3-preview/18af6099f1c1957ece75754afc2fd1a6ac89d016?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
     "track_number" : 3,
     "type" : "track",
@@ -1704,6 +1704,74 @@
       "album_type" : "ALBUM",
       "artists" : [ {
         "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4"
+        },
+        "href" : "https://api.spotify.com/v1/artists/2DaxqgrOhkeH0fpeiQq2f4",
+        "id" : "2DaxqgrOhkeH0fpeiQq2f4",
+        "name" : "Oasis",
+        "type" : "artist",
+        "uri" : "spotify:artist:2DaxqgrOhkeH0fpeiQq2f4"
+      } ],
+      "available_markets" : [ "AE", "AR", "AU", "BG", "BH", "BO", "BR", "CL", "CO", "CR", "CY", "CZ", "DO", "EC", "EG", "GR", "GT", "HK", "HN", "HU", "ID", "IL", "IN", "IT", "JO", "KW", "LB", "MT", "MX", "MY", "NI", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PY", "QA", "RO", "SA", "SG", "SK", "SV", "TH", "TR", "TW", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/1VW1MFNstaJuygaoTPkdCk"
+      },
+      "href" : "https://api.spotify.com/v1/albums/1VW1MFNstaJuygaoTPkdCk",
+      "id" : "1VW1MFNstaJuygaoTPkdCk",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/ab67616d0000b27385e5dcc05cc216a10f141480",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ab67616d00001e0285e5dcc05cc216a10f141480",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/ab67616d0000485185e5dcc05cc216a10f141480",
+        "width" : 64
+      } ],
+      "name" : "(What's The Story) Morning Glory? [Remastered]",
+      "release_date" : "1995-10-02",
+      "release_date_precision" : "day",
+      "total_tracks" : 40,
+      "type" : "album",
+      "uri" : "spotify:album:1VW1MFNstaJuygaoTPkdCk"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4"
+      },
+      "href" : "https://api.spotify.com/v1/artists/2DaxqgrOhkeH0fpeiQq2f4",
+      "id" : "2DaxqgrOhkeH0fpeiQq2f4",
+      "name" : "Oasis",
+      "type" : "artist",
+      "uri" : "spotify:artist:2DaxqgrOhkeH0fpeiQq2f4"
+    } ],
+    "available_markets" : [ "AE", "AR", "AU", "BG", "BH", "BO", "BR", "CL", "CO", "CR", "CY", "CZ", "DO", "EC", "EG", "GR", "GT", "HK", "HN", "HU", "ID", "IL", "IN", "IT", "JO", "KW", "LB", "MT", "MX", "MY", "NI", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PY", "QA", "RO", "SA", "SG", "SK", "SV", "TH", "TR", "TW", "UY", "VN", "ZA" ],
+    "disc_number" : 1,
+    "duration_ms" : 258773,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "GBQCP1400109"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5qqabIl2vWzo9ApSC317sa"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5qqabIl2vWzo9ApSC317sa",
+    "id" : "5qqabIl2vWzo9ApSC317sa",
+    "is_local" : false,
+    "name" : "Wonderwall - Remastered",
+    "popularity" : 81,
+    "preview_url" : "https://p.scdn.co/mp3-preview/d2c5a17756fead2fafc4d9336edf1659f7142a74?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:5qqabIl2vWzo9ApSC317sa"
+  }, {
+    "album" : {
+      "album_type" : "ALBUM",
+      "artists" : [ {
+        "external_urls" : {
           "spotify" : "https://open.spotify.com/artist/2hl0xAkS2AIRAu23TVMBG1"
         },
         "href" : "https://api.spotify.com/v1/artists/2hl0xAkS2AIRAu23TVMBG1",
@@ -1767,74 +1835,6 @@
     "track_number" : 7,
     "type" : "track",
     "uri" : "spotify:track:6zeE5tKyr8Nu882DQhhSQI"
-  }, {
-    "album" : {
-      "album_type" : "ALBUM",
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4"
-        },
-        "href" : "https://api.spotify.com/v1/artists/2DaxqgrOhkeH0fpeiQq2f4",
-        "id" : "2DaxqgrOhkeH0fpeiQq2f4",
-        "name" : "Oasis",
-        "type" : "artist",
-        "uri" : "spotify:artist:2DaxqgrOhkeH0fpeiQq2f4"
-      } ],
-      "available_markets" : [ "AE", "AR", "AU", "BG", "BH", "BO", "BR", "CL", "CO", "CR", "CY", "CZ", "DO", "EC", "EG", "GR", "GT", "HK", "HN", "HU", "ID", "IL", "IN", "IT", "JO", "KW", "LB", "MT", "MX", "MY", "NI", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PY", "QA", "RO", "SA", "SG", "SK", "SV", "TH", "TR", "TW", "UY", "VN", "ZA" ],
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/album/1VW1MFNstaJuygaoTPkdCk"
-      },
-      "href" : "https://api.spotify.com/v1/albums/1VW1MFNstaJuygaoTPkdCk",
-      "id" : "1VW1MFNstaJuygaoTPkdCk",
-      "images" : [ {
-        "height" : 640,
-        "url" : "https://i.scdn.co/image/ab67616d0000b27385e5dcc05cc216a10f141480",
-        "width" : 640
-      }, {
-        "height" : 300,
-        "url" : "https://i.scdn.co/image/ab67616d00001e0285e5dcc05cc216a10f141480",
-        "width" : 300
-      }, {
-        "height" : 64,
-        "url" : "https://i.scdn.co/image/ab67616d0000485185e5dcc05cc216a10f141480",
-        "width" : 64
-      } ],
-      "name" : "(What's The Story) Morning Glory? [Remastered]",
-      "release_date" : "1995-10-02",
-      "release_date_precision" : "day",
-      "total_tracks" : 40,
-      "type" : "album",
-      "uri" : "spotify:album:1VW1MFNstaJuygaoTPkdCk"
-    },
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4"
-      },
-      "href" : "https://api.spotify.com/v1/artists/2DaxqgrOhkeH0fpeiQq2f4",
-      "id" : "2DaxqgrOhkeH0fpeiQq2f4",
-      "name" : "Oasis",
-      "type" : "artist",
-      "uri" : "spotify:artist:2DaxqgrOhkeH0fpeiQq2f4"
-    } ],
-    "available_markets" : [ "AE", "AR", "AU", "BG", "BH", "BO", "BR", "CL", "CO", "CR", "CY", "CZ", "DO", "EC", "EG", "GR", "GT", "HK", "HN", "HU", "ID", "IL", "IN", "IT", "JO", "KW", "LB", "MT", "MX", "MY", "NI", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PY", "QA", "RO", "SA", "SG", "SK", "SV", "TH", "TR", "TW", "UY", "VN", "ZA" ],
-    "disc_number" : 1,
-    "duration_ms" : 258773,
-    "explicit" : false,
-    "external_ids" : {
-      "isrc" : "GBQCP1400109"
-    },
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/5qqabIl2vWzo9ApSC317sa"
-    },
-    "href" : "https://api.spotify.com/v1/tracks/5qqabIl2vWzo9ApSC317sa",
-    "id" : "5qqabIl2vWzo9ApSC317sa",
-    "is_local" : false,
-    "name" : "Wonderwall - Remastered",
-    "popularity" : 80,
-    "preview_url" : "https://p.scdn.co/mp3-preview/d2c5a17756fead2fafc4d9336edf1659f7142a74?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
-    "track_number" : 3,
-    "type" : "track",
-    "uri" : "spotify:track:5qqabIl2vWzo9ApSC317sa"
   }, {
     "album" : {
       "album_type" : "ALBUM",

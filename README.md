@@ -178,12 +178,12 @@ _For more explanations, please refer to the [Documentation](https://developer.sp
 ## Roadmap
 
 - [x] Pipeline ETL from Spotify Private Data
-  - [x] Data Extract
-  - [x] Data Transform
-  - [x] Data Load on SQLite
-- [ ] Web application
-  - [ ] Dashboard
-  - [ ] Use extracted data to create a new playlist on Spotify account
+  - [x] Data Extract -> Get data using Spotify API
+  - [x] Data Transform -> Make all data structure using pandas and validation
+  - [x] Data Load -> Store these data on SQLite database to recover later on web application
+- [x] Web application
+  - [x] Front-end -> interface with user
+  - [x] Option to create a new playlist -> Use these extracted data to create a new playlist on Spotify account
 
 <p align="right">(<a href="#spotify-top-tracks">back to top</a>)</p>
 
