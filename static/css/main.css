@@ -106,7 +106,35 @@ html {
     width: 100%;
 }
 
-@media screen and (min-width: 810px) {
+.container .about {
+    margin: 10% 5%;
+    background-color: var(--bg-third);
+    border-radius: 1rem 0;
+    padding: .5rem;
+}
+
+.container .about h2 {
+    color: var(--bg-third);
+    background-color: var(--bg-secondary);
+    border-radius: 1rem 0;
+    margin: .5rem;
+    text-align: center;
+    padding: .3rem;
+}
+
+.container .about div p {
+    color: var(--font-primary);
+    text-align: center;
+    margin: .5rem;
+}
+
+.container .about div ul li {
+    color: var(--font-primary);
+    margin: 1rem;
+    text-align: justify;
+}
+
+@media screen and (min-width: 910px) {
     .container .playlist form {
         display: flex;
         flex-direction: row;
@@ -117,12 +145,33 @@ html {
     .container .playlist form input {
         width: 30%;
     }   
+    
+    .container .tracks-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .container .tracks-list .table {
+        width: 430px;
+    }
 
-    /* .container .tracks-list {
-        display: grid;
-        grid-template-columns: 400px 400px 400px;
-        grid-template-rows: 80px auto 80px; 
-        column-gap: 10px;
-        row-gap: 15px;
-    } */
+    
+    .error-msg,
+    .success-msg {
+        border-radius: 2rem;
+        text-align: center;
+        font-weight: 600;
+        color: #ffffff;
+        padding: 1rem;
+        margin: 1rem 10rem;
+    }
+
+    .error-msg {
+        background-color: #cf4d4d;
+    }
+
+    .success-msg {
+        background-color: #46b34f;
+    }
 }

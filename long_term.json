@@ -62,7 +62,7 @@
     "id" : "3BQHpFgAp4l80e1XslIjNI",
     "is_local" : false,
     "name" : "Yesterday - Remastered 2009",
-    "popularity" : 78,
+    "popularity" : 79,
     "preview_url" : null,
     "track_number" : 13,
     "type" : "track",
@@ -674,7 +674,7 @@
     "id" : "6YowAxI2HIbhAwumOqpldE",
     "is_local" : false,
     "name" : "Through the Valley",
-    "popularity" : 57,
+    "popularity" : 58,
     "preview_url" : "https://p.scdn.co/mp3-preview/9be899746792ec9c2c14b9ff0ca683e486fd79fb?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
     "track_number" : 6,
     "type" : "track",
@@ -742,7 +742,7 @@
     "id" : "5MxNLUsfh7uzROypsoO5qe",
     "is_local" : false,
     "name" : "Dream On",
-    "popularity" : 12,
+    "popularity" : 11,
     "preview_url" : null,
     "track_number" : 3,
     "type" : "track",
@@ -1150,7 +1150,7 @@
     "id" : "5JQVkWMnzmBgV1MjmlHpN7",
     "is_local" : false,
     "name" : "Demons - Live London Sessions / 2013",
-    "popularity" : 13,
+    "popularity" : 12,
     "preview_url" : null,
     "track_number" : 4,
     "type" : "track",
@@ -1354,7 +1354,7 @@
     "id" : "4DMKwE2E2iYDKY01C335Uw",
     "is_local" : false,
     "name" : "Carry on Wayward Son",
-    "popularity" : 77,
+    "popularity" : 78,
     "preview_url" : "https://p.scdn.co/mp3-preview/189d19a38bab3a4ee0e6401f77903e3696bb522e?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
     "track_number" : 1,
     "type" : "track",
@@ -1704,6 +1704,74 @@
       "album_type" : "ALBUM",
       "artists" : [ {
         "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/2hl0xAkS2AIRAu23TVMBG1"
+        },
+        "href" : "https://api.spotify.com/v1/artists/2hl0xAkS2AIRAu23TVMBG1",
+        "id" : "2hl0xAkS2AIRAu23TVMBG1",
+        "name" : "Kansas",
+        "type" : "artist",
+        "uri" : "spotify:artist:2hl0xAkS2AIRAu23TVMBG1"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/6oU298pdPTCQnMx1PYwyUA"
+      },
+      "href" : "https://api.spotify.com/v1/albums/6oU298pdPTCQnMx1PYwyUA",
+      "id" : "6oU298pdPTCQnMx1PYwyUA",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/ab67616d0000b27359f0f56a7cd13526b5b4204c",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ab67616d00001e0259f0f56a7cd13526b5b4204c",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/ab67616d0000485159f0f56a7cd13526b5b4204c",
+        "width" : 64
+      } ],
+      "name" : "Point Of Know Return (Expanded Edition)",
+      "release_date" : "1977",
+      "release_date_precision" : "year",
+      "total_tracks" : 12,
+      "type" : "album",
+      "uri" : "spotify:album:6oU298pdPTCQnMx1PYwyUA"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/2hl0xAkS2AIRAu23TVMBG1"
+      },
+      "href" : "https://api.spotify.com/v1/artists/2hl0xAkS2AIRAu23TVMBG1",
+      "id" : "2hl0xAkS2AIRAu23TVMBG1",
+      "name" : "Kansas",
+      "type" : "artist",
+      "uri" : "spotify:artist:2hl0xAkS2AIRAu23TVMBG1"
+    } ],
+    "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+    "disc_number" : 1,
+    "duration_ms" : 206266,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USSM10103196"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6zeE5tKyr8Nu882DQhhSQI"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6zeE5tKyr8Nu882DQhhSQI",
+    "id" : "6zeE5tKyr8Nu882DQhhSQI",
+    "is_local" : false,
+    "name" : "Dust in the Wind",
+    "popularity" : 81,
+    "preview_url" : "https://p.scdn.co/mp3-preview/ddfc248171b5199053bafdefbc94ab5b335faa48?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:6zeE5tKyr8Nu882DQhhSQI"
+  }, {
+    "album" : {
+      "album_type" : "ALBUM",
+      "artists" : [ {
+        "external_urls" : {
           "spotify" : "https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4"
         },
         "href" : "https://api.spotify.com/v1/artists/2DaxqgrOhkeH0fpeiQq2f4",
@@ -1767,142 +1835,6 @@
     "track_number" : 3,
     "type" : "track",
     "uri" : "spotify:track:5qqabIl2vWzo9ApSC317sa"
-  }, {
-    "album" : {
-      "album_type" : "ALBUM",
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/2hl0xAkS2AIRAu23TVMBG1"
-        },
-        "href" : "https://api.spotify.com/v1/artists/2hl0xAkS2AIRAu23TVMBG1",
-        "id" : "2hl0xAkS2AIRAu23TVMBG1",
-        "name" : "Kansas",
-        "type" : "artist",
-        "uri" : "spotify:artist:2hl0xAkS2AIRAu23TVMBG1"
-      } ],
-      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/album/6oU298pdPTCQnMx1PYwyUA"
-      },
-      "href" : "https://api.spotify.com/v1/albums/6oU298pdPTCQnMx1PYwyUA",
-      "id" : "6oU298pdPTCQnMx1PYwyUA",
-      "images" : [ {
-        "height" : 640,
-        "url" : "https://i.scdn.co/image/ab67616d0000b27359f0f56a7cd13526b5b4204c",
-        "width" : 640
-      }, {
-        "height" : 300,
-        "url" : "https://i.scdn.co/image/ab67616d00001e0259f0f56a7cd13526b5b4204c",
-        "width" : 300
-      }, {
-        "height" : 64,
-        "url" : "https://i.scdn.co/image/ab67616d0000485159f0f56a7cd13526b5b4204c",
-        "width" : 64
-      } ],
-      "name" : "Point Of Know Return (Expanded Edition)",
-      "release_date" : "1977",
-      "release_date_precision" : "year",
-      "total_tracks" : 12,
-      "type" : "album",
-      "uri" : "spotify:album:6oU298pdPTCQnMx1PYwyUA"
-    },
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/2hl0xAkS2AIRAu23TVMBG1"
-      },
-      "href" : "https://api.spotify.com/v1/artists/2hl0xAkS2AIRAu23TVMBG1",
-      "id" : "2hl0xAkS2AIRAu23TVMBG1",
-      "name" : "Kansas",
-      "type" : "artist",
-      "uri" : "spotify:artist:2hl0xAkS2AIRAu23TVMBG1"
-    } ],
-    "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
-    "disc_number" : 1,
-    "duration_ms" : 206266,
-    "explicit" : false,
-    "external_ids" : {
-      "isrc" : "USSM10103196"
-    },
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6zeE5tKyr8Nu882DQhhSQI"
-    },
-    "href" : "https://api.spotify.com/v1/tracks/6zeE5tKyr8Nu882DQhhSQI",
-    "id" : "6zeE5tKyr8Nu882DQhhSQI",
-    "is_local" : false,
-    "name" : "Dust in the Wind",
-    "popularity" : 80,
-    "preview_url" : "https://p.scdn.co/mp3-preview/ddfc248171b5199053bafdefbc94ab5b335faa48?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
-    "track_number" : 7,
-    "type" : "track",
-    "uri" : "spotify:track:6zeE5tKyr8Nu882DQhhSQI"
-  }, {
-    "album" : {
-      "album_type" : "ALBUM",
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-        },
-        "href" : "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-        "id" : "0oSGxfWSnnOXhD2fKuz2Gy",
-        "name" : "David Bowie",
-        "type" : "artist",
-        "uri" : "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-      } ],
-      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/album/48D1hRORqJq52qsnUYZX56"
-      },
-      "href" : "https://api.spotify.com/v1/albums/48D1hRORqJq52qsnUYZX56",
-      "id" : "48D1hRORqJq52qsnUYZX56",
-      "images" : [ {
-        "height" : 640,
-        "url" : "https://i.scdn.co/image/ab67616d0000b273c41f4e1133b0e6c5fcf58680",
-        "width" : 640
-      }, {
-        "height" : 300,
-        "url" : "https://i.scdn.co/image/ab67616d00001e02c41f4e1133b0e6c5fcf58680",
-        "width" : 300
-      }, {
-        "height" : 64,
-        "url" : "https://i.scdn.co/image/ab67616d00004851c41f4e1133b0e6c5fcf58680",
-        "width" : 64
-      } ],
-      "name" : "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
-      "release_date" : "1972-06-06",
-      "release_date_precision" : "day",
-      "total_tracks" : 11,
-      "type" : "album",
-      "uri" : "spotify:album:48D1hRORqJq52qsnUYZX56"
-    },
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-      },
-      "href" : "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-      "id" : "0oSGxfWSnnOXhD2fKuz2Gy",
-      "name" : "David Bowie",
-      "type" : "artist",
-      "uri" : "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-    } ],
-    "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
-    "disc_number" : 1,
-    "duration_ms" : 254293,
-    "explicit" : false,
-    "external_ids" : {
-      "isrc" : "USJT11200004"
-    },
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/0pQskrTITgmCMyr85tb9qq"
-    },
-    "href" : "https://api.spotify.com/v1/tracks/0pQskrTITgmCMyr85tb9qq",
-    "id" : "0pQskrTITgmCMyr85tb9qq",
-    "is_local" : false,
-    "name" : "Starman - 2012 Remaster",
-    "popularity" : 78,
-    "preview_url" : "https://p.scdn.co/mp3-preview/6b0a9731bccd31cea4f1e229800e82b5c7be8f53?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
-    "track_number" : 4,
-    "type" : "track",
-    "uri" : "spotify:track:0pQskrTITgmCMyr85tb9qq"
   }, {
     "album" : {
       "album_type" : "ALBUM",
@@ -1976,69 +1908,137 @@
       "album_type" : "ALBUM",
       "artists" : [ {
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/3Tm1aSSPoM8fTDoYmWJt4t"
+          "spotify" : "https://open.spotify.com/artist/3IYUhFvPQItj6xySrBmZkd"
         },
-        "href" : "https://api.spotify.com/v1/artists/3Tm1aSSPoM8fTDoYmWJt4t",
-        "id" : "3Tm1aSSPoM8fTDoYmWJt4t",
-        "name" : "Adriana Partimpim",
+        "href" : "https://api.spotify.com/v1/artists/3IYUhFvPQItj6xySrBmZkd",
+        "id" : "3IYUhFvPQItj6xySrBmZkd",
+        "name" : "Creedence Clearwater Revival",
         "type" : "artist",
-        "uri" : "spotify:artist:3Tm1aSSPoM8fTDoYmWJt4t"
+        "uri" : "spotify:artist:3IYUhFvPQItj6xySrBmZkd"
       } ],
-      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
       "external_urls" : {
-        "spotify" : "https://open.spotify.com/album/3JcAuK7CQvFexJCNFd20r9"
+        "spotify" : "https://open.spotify.com/album/372cMadhAGlNuDnc8TssqF"
       },
-      "href" : "https://api.spotify.com/v1/albums/3JcAuK7CQvFexJCNFd20r9",
-      "id" : "3JcAuK7CQvFexJCNFd20r9",
+      "href" : "https://api.spotify.com/v1/albums/372cMadhAGlNuDnc8TssqF",
+      "id" : "372cMadhAGlNuDnc8TssqF",
       "images" : [ {
         "height" : 640,
-        "url" : "https://i.scdn.co/image/ab67616d0000b273ed8eaf749eef749a89a54088",
+        "url" : "https://i.scdn.co/image/ab67616d0000b27351f311c2fb06ad2789e3ff91",
         "width" : 640
       }, {
         "height" : 300,
-        "url" : "https://i.scdn.co/image/ab67616d00001e02ed8eaf749eef749a89a54088",
+        "url" : "https://i.scdn.co/image/ab67616d00001e0251f311c2fb06ad2789e3ff91",
         "width" : 300
       }, {
         "height" : 64,
-        "url" : "https://i.scdn.co/image/ab67616d00004851ed8eaf749eef749a89a54088",
+        "url" : "https://i.scdn.co/image/ab67616d0000485151f311c2fb06ad2789e3ff91",
         "width" : 64
       } ],
-      "name" : "Adriana Partimpim",
-      "release_date" : "2004-06-17",
+      "name" : "Pendulum (Expanded Edition)",
+      "release_date" : "1970-12-07",
       "release_date_precision" : "day",
-      "total_tracks" : 10,
+      "total_tracks" : 13,
       "type" : "album",
-      "uri" : "spotify:album:3JcAuK7CQvFexJCNFd20r9"
+      "uri" : "spotify:album:372cMadhAGlNuDnc8TssqF"
     },
     "artists" : [ {
       "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Tm1aSSPoM8fTDoYmWJt4t"
+        "spotify" : "https://open.spotify.com/artist/3IYUhFvPQItj6xySrBmZkd"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Tm1aSSPoM8fTDoYmWJt4t",
-      "id" : "3Tm1aSSPoM8fTDoYmWJt4t",
-      "name" : "Adriana Partimpim",
+      "href" : "https://api.spotify.com/v1/artists/3IYUhFvPQItj6xySrBmZkd",
+      "id" : "3IYUhFvPQItj6xySrBmZkd",
+      "name" : "Creedence Clearwater Revival",
       "type" : "artist",
-      "uri" : "spotify:artist:3Tm1aSSPoM8fTDoYmWJt4t"
+      "uri" : "spotify:artist:3IYUhFvPQItj6xySrBmZkd"
+    } ],
+    "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+    "disc_number" : 1,
+    "duration_ms" : 160133,
+    "explicit" : false,
+    "external_ids" : {
+      "isrc" : "USC4R0817643"
+    },
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2LawezPeJhN4AWuSB0GtAU"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2LawezPeJhN4AWuSB0GtAU",
+    "id" : "2LawezPeJhN4AWuSB0GtAU",
+    "is_local" : false,
+    "name" : "Have You Ever Seen The Rain",
+    "popularity" : 88,
+    "preview_url" : null,
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:2LawezPeJhN4AWuSB0GtAU"
+  }, {
+    "album" : {
+      "album_type" : "ALBUM",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+        "id" : "0oSGxfWSnnOXhD2fKuz2Gy",
+        "name" : "David Bowie",
+        "type" : "artist",
+        "uri" : "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
+      } ],
+      "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/48D1hRORqJq52qsnUYZX56"
+      },
+      "href" : "https://api.spotify.com/v1/albums/48D1hRORqJq52qsnUYZX56",
+      "id" : "48D1hRORqJq52qsnUYZX56",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/ab67616d0000b273c41f4e1133b0e6c5fcf58680",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ab67616d00001e02c41f4e1133b0e6c5fcf58680",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/ab67616d00004851c41f4e1133b0e6c5fcf58680",
+        "width" : 64
+      } ],
+      "name" : "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
+      "release_date" : "1972-06-06",
+      "release_date_precision" : "day",
+      "total_tracks" : 11,
+      "type" : "album",
+      "uri" : "spotify:album:48D1hRORqJq52qsnUYZX56"
+    },
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
+      "id" : "0oSGxfWSnnOXhD2fKuz2Gy",
+      "name" : "David Bowie",
+      "type" : "artist",
+      "uri" : "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
     } ],
     "available_markets" : [ "AD", "AE", "AR", "AT", "AU", "BE", "BG", "BH", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KW", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "SA", "SE", "SG", "SK", "SV", "TH", "TN", "TR", "TW", "US", "UY", "VN", "ZA" ],
     "disc_number" : 1,
-    "duration_ms" : 188146,
+    "duration_ms" : 254293,
     "explicit" : false,
     "external_ids" : {
-      "isrc" : "BRBMG0400006"
+      "isrc" : "USJT11200004"
     },
     "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/36i9NcqbdQFdQfOROpIwMA"
+      "spotify" : "https://open.spotify.com/track/0pQskrTITgmCMyr85tb9qq"
     },
-    "href" : "https://api.spotify.com/v1/tracks/36i9NcqbdQFdQfOROpIwMA",
-    "id" : "36i9NcqbdQFdQfOROpIwMA",
+    "href" : "https://api.spotify.com/v1/tracks/0pQskrTITgmCMyr85tb9qq",
+    "id" : "0pQskrTITgmCMyr85tb9qq",
     "is_local" : false,
-    "name" : "Fico Assim Sem Você",
-    "popularity" : 64,
-    "preview_url" : "https://p.scdn.co/mp3-preview/dd8df4661b3d2887dc948f6aaa9f0da874613226?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
+    "name" : "Starman - 2012 Remaster",
+    "popularity" : 78,
+    "preview_url" : "https://p.scdn.co/mp3-preview/6b0a9731bccd31cea4f1e229800e82b5c7be8f53?cid=9fa74ab099c04f5aacc8ebcd62c44e59",
     "track_number" : 4,
     "type" : "track",
-    "uri" : "spotify:track:36i9NcqbdQFdQfOROpIwMA"
+    "uri" : "spotify:track:0pQskrTITgmCMyr85tb9qq"
   } ],
   "total" : 50,
   "limit" : 30,

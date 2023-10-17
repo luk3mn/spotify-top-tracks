@@ -58,8 +58,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][general-code-screenshot]]
+![Home](assets/image-app.png)
 
 
 <p align="justify">
@@ -171,6 +170,8 @@ _Before starting this application in your local environment, it'll be necessary 
 _For more explanations, please refer to the [Documentation](https://developer.spotify.com/documentation/web-api/tutorials/getting-started)_
 
 <p align="right">(<a href="#spotify-top-tracks">back to top</a>)</p>
+
+![Tracks](assets/image-app2.png)
 
 
 

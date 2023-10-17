@@ -20,7 +20,7 @@ ENDPOINT = 'https://api.spotify.com/v1/'
 REDIRECT_URI = 'http://127.0.0.1:5000/redirect'
 
 ### ACCESS TOKEN
-TOKEN = 'token'
+# TOKEN = 'token'
 
 app = Flask(__name__)
 app.secret_key = credentials['SECRET_KEY']
@@ -39,7 +39,7 @@ def redirect_page():
         session.clear()
         code = request.args['code']
         new_token = get_authorization.get_token(code=code).json()['access_token']
-        session[TOKEN] = new_token
+        session['access_token'] = new_token
 
         headers = {
             "Accept" : "application/json",
@@ -90,14 +90,15 @@ def redirect_page():
     data_load_lt = DataLoad(df=df_lt, tb_name='long_term_tracks')
     data_load_lt.sql_store()
 
-    return redirect('/about')
+    return redirect('/home')
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/short-term-tracks')
 def short_term_tracks():
+    session.clear()
     tracks = search_db(table='short_term_tracks')
     global uris
     uris = data_struct.get_tracks_uris(filename='short_term.json')
@@ -105,6 +106,7 @@ def short_term_tracks():
 
 @app.route('/medium-term-tracks')
 def medium_term_tracks():
+    session.clear()
     tracks = search_db(table='medium_term_tracks')
     global uris
     uris = data_struct.get_tracks_uris(filename='medium_term.json')
@@ -112,6 +114,7 @@ def medium_term_tracks():
 
 @app.route('/long-term-tracks')
 def long_term_tracks():
+    session.clear() 
     tracks = search_db(table='long_term_tracks')
     global uris
     uris = data_struct.get_tracks_uris(filename='long_term.json')
@@ -123,23 +126,30 @@ def search_db(table):
     cursor.execute('SELECT * FROM {}'.format(table))
     return cursor.fetchall()
 
-""" FIX IT
-- Forbid to creating playlist by URL
-- Improve application flow to remove error on playlist (maybe improving rotes)
-"""
 @app.route("/create_playlist", methods=['GET', 'POST'])
 def create_playlist():
 
-    if request.method == 'POST':
-        playlist_name = request.form['name']
-        playlist_desc = request.form['description']
+    try:
+        if request.method == 'POST':
+            playlist_name = request.form['name']
+            playlist_desc = request.form['description']
+        
+        if playlist_name: 
+            pl = playlist.create_playlist(name=playlist_name, description=playlist_desc)
+            playlist.populate_playlist(playlist_id=pl['id'], uris=uris)
+        else:
+            session.clear()
+            session['empty_field'] = 'Please, enter some value in playlist name'
+            return redirect('/home')
+        
+        session.clear() # to clear cache before redirecting
+        session['playlist_created'] = f'Your playlist {playlist_name} has been created successful'
+        return redirect('/home')
+    except (NameError):
+        # session.clear()
+        # session['error'] = 'Something went wrong!!'
+        # return redirect('/home')
+        return redirect('/')
     
-    if playlist_name: 
-        pl = playlist.create_playlist(name=playlist_name, description=playlist_desc)
-        playlist.populate_playlist(playlist_id=pl['id'], uris=uris)
-    else:
-        return 'Please, enter a value for your playlist name'
-    return redirect('/')
-
 if __name__ == '__main__':
     app.run(debug=True)

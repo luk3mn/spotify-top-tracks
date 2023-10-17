@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if session['empty_field'] %}
+        <div class="error-msg">
+            <h4>{{ session['empty_field']}} </h4>
+        </div>
+    {% endif %}
+    
+    {% if session['playlist_created'] %}
+        <div class="success-msg">
+            <h4>{{ session['playlist_created'] }} </h4>
+        </div>
+    {% endif %}
+    
+    {% if session['error'] %}
+        <div class="error-msg">
+            <h4>{{ session['error'] }}</h4>
+        </div>
+    {% endif %}
+
+    <div class="about">
+        <h2>About the project </h2>
+        <div>
+            <p>This project is an experiment about a creation to playlists on Spotify using extracted private data from Spotify API.</p>
+            <ul>
+                <li>Short Term Tracks: Tracks have you been hearing for approximately the last 4 weeks</li>
+                <li>Medium Term Tracks: Tracks have heard approximately the last 6 months</li>
+                <li>Long Term Tracks: These are tracks that you have heard for many years until today</li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
